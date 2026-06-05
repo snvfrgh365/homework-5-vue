@@ -1,0 +1,63 @@
+﻿@charset "big5";
+
+.ui-keyboard { padding: 0.3em; position: absolute; left: 0px; top: 0px; z-index: 16000; }
+
+.ui-keyboard-has-focus { z-index: 16001; }
+
+.ui-keyboard div { font-size: 1.1em; }
+
+.ui-keyboard-button { height: 2em; min-width: 2em; margin: auto; cursor: pointer; overflow: hidden; line-height: 2em; }
+
+.ui-keyboard-button span { padding: 0px; margin: 0px; white-space: nowrap; display: inline-block; }
+
+.ui-keyboard-button-endrow { clear: left; }
+
+.ui-keyboard-space { width: 15em; }
+
+.ui-keyboard-space span, .ui-keyboard-empty span { font: 0px / 0 a; text-shadow: none; color: transparent; }
+
+.ui-keyboard-preview-wrapper { text-align: center; }
+
+.ui-keyboard-preview { text-align: left; margin: 0px 0px 3px; display: inline; width: 99%; }
+
+.ui-keyboard-keyset { text-align: center; white-space: nowrap; }
+
+.ui-keyboard-input { text-align: left; }
+
+.ui-keyboard-input-current { box-shadow: rgb(77, 144, 254) 0px 0px 5px; }
+
+.ui-keyboard-placeholder { color: rgb(136, 136, 136); }
+
+.ui-keyboard-nokeyboard { color: rgb(136, 136, 136); border-color: rgb(136, 136, 136); }
+
+.ui-keyboard-spacer { display: inline-block; width: 1px; height: 0px; cursor: default; }
+
+.ui-keyboard-input.light, .ui-keyboard-preview.light { color: rgb(34, 34, 34); background: rgb(221, 221, 221); }
+
+.ui-keyboard-input.dark, .ui-keyboard-preview.dark { color: rgb(221, 221, 221); background: rgb(34, 34, 34); }
+
+.ui-keyboard-button.ui-keyboard-combo.ui-state-default { border-color: rgb(255, 175, 15); }
+
+button.ui-keyboard-accept.ui-keyboard-valid-input { border-color: rgb(0, 204, 0); background: rgb(0, 136, 0); color: rgb(255, 255, 255); }
+
+button.ui-keyboard-accept.ui-keyboard-valid-input:hover { background: rgb(0, 170, 0); }
+
+button.ui-keyboard-accept.ui-keyboard-invalid-input { border-color: rgb(204, 0, 0); background: rgb(136, 0, 0); color: rgb(255, 255, 255); opacity: 0.5; }
+
+button.ui-keyboard-accept.ui-keyboard-invalid-input:hover { background: rgb(170, 0, 0); }
+
+button.ui-keyboard-button.btn { padding: 1px 6px; }
+
+button.ui-keyboard-toggle span { width: 0.8em; height: 0.8em; display: inline-block; background-repeat: no-repeat; background-position: center center; background-size: contain; }
+
+.ui-keyboard.ui-keyboard-disabled button:not(.ui-keyboard-toggle), .ui-keyboard.ui-keyboard-disabled input { opacity: 0.5; }
+
+.ui-keyboard-overlay { position: absolute; inset: 0px; background: rgba(0, 0, 0, 0.5); }
+
+.ui-keyboard-popup { display: inline-block; max-width: 22em; }
+
+div.ui-keyboard-extender { float: right; margin-left: 5px; }
+
+button.ui-keyboard-extender span { width: 0.9em; height: 0.9em; display: inline-block; margin-bottom: 3px; background-repeat: no-repeat; background-position: center center; background-size: contain; }
+
+button.ui-keyboard-bksp { background-color: rgb(250, 199, 199); }

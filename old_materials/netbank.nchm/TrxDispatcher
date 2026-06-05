@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--2006.01.06 added by Dockers--><!--2006.01.06 added by Dockers--><!--for 公告--><!--for 廣告輪撥--><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-f7e748ad-5cb3-495b-a8a2-1d75c0002809@mhtml.blink" />
+
+
+
+
+
+<meta http-equiv="refresh" content="540">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>遨遊金融、理財舵手~華南銀行-個人網路銀行</title>
+<link href="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/css.css?v=20251203" rel="stylesheet" type="text/css">
+<link href="https://netbank.hncb.com.tw/netbank/pages/template/html/js/font-awesome-4.5.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+<!--[if lt IE 9]>
+    <script>
+		detectBrowserVer("CH");
+	</script>
+<![endif]-->
+
+
+
+
+
+<!--2010/09/17 add for javaScript 取代 java applet-->
+
+
+
+
+<!-- 小鍵盤 start -->   
+<link href="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/css/jquery-ui.min.css" rel="stylesheet">
+<link href="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/css/keyboard.css" rel="stylesheet"> 
+
+
+</head><body class="private">﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+<link href="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/css/jquery.bxslider.css" rel="stylesheet">
+
+
+
+
+<div id="Layer2" style="visibility: hidden;position: absolute; left: 0; top: 0; width: 100%; height: 100%;z-index: 1;background-image: url('/netbank/pages/images/inc/header_popupwindow_bg.gif'); layer-background-image: url('/netbank/pages/images/inc/header_popupwindow_bg.gif');">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+    <tbody><tr>
+      <td align="center" valign="top">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td width="150" height="49" align="left" valign="bottom"><a href="http://www.hncb.com.tw/"><img src="https://netbank.hncb.com.tw/netbank/pages/images/inc/hn_logo.gif" width="183" height="42" hspace="22" border="0"></a></td>
+        <td align="left" valign="bottom"><img src="https://netbank.hncb.com.tw/netbank/pages/images/inc/slogan.gif" width="122" height="16" hspace="15" vspace="14"></td>
+        <td align="right" valign="top"><a href="http://www.hnfhc.com.tw/" target="_blank"><img src="https://netbank.hncb.com.tw/netbank/pages/images/inc/hnf_logo.gif" width="97" height="23" hspace="23" border="0"></a></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table></td>
+          </tr>
+        </tbody></table>
+        <!--hr-->
+        <br>
+        <br>
+        <br>
+		<br>
+        <h2><font color="purple" style="font-size:20px;font-weight: bold;">簽入執行中，請稍候...</font></h2>
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+<div id="Layer1" style="position:absolute; left:1px; top:1px; width:100%; height:100%; z-index:2">
+<form name="LoginForm" id="LoginForm_post" method="post" action="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher" autocomplete="off">
+    
+    
+    
+    
+    
+    
+    
+	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+	
+	
+	
+	
+	
+    
+	                
+	
+	                
+<div class="private">
+  <div class="header">
+    <div class="wrapper clearfix">
+      <h1 class="logo text_none"><a href="http://www.hncb.com.tw/" target="_blank">華南銀行</a></h1>
+      <h2 class="text_none"><span>個人網路銀行</span></h2>
+      <ul class="language">
+        <li><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;lang=EN&amp;Recognition=private">English</a></li>
+        <li><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;lang=CN&amp;Recognition=private">简体中文</a></li>
+      </ul>
+      <ul class="top_nav">
+        <li><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=company">企業網銀</a></li>
+        <li><a href="http://www.hnfhc.com.tw/" target="_blank">華南金控</a></li>
+      </ul>
+
+    </div>
+  </div>
+  <div class="content">
+    <div class="wrapper">
+      <div class="login_box clearfix">
+		<div class="slides_container" style="float: left;width: 690px;height: 350px;">
+			<div class="bx-wrapper" style="max-width: 690px;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 350px;"><ul id="slides_home" style="width: 715%; position: relative; transition-duration: 0.5s; transform: translate3d(-1380px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 690px;" class="bx-clone"><img class="slideHomePic" src="https://netbank.hncb.com.tw/netbank/pages/images/notice/Loan_1151231_071_1.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 690px;"><a href="https://svc.tabf.org.tw/115hncb02" target="_blank"><img class="slideHomePic" src="https://netbank.hncb.com.tw/netbank/pages/images/notice/hr_20260323_061_2.png" alt=""></a></li><li style="float: left; list-style: none; position: relative; width: 690px;"><a href="https://svc.tabf.org.tw/115hncb01" target="_blank"><img class="slideHomePic" src="https://netbank.hncb.com.tw/netbank/pages/images/notice/hr_20260323_061_1.png" alt=""></a></li><li style="float: left; list-style: none; position: relative; width: 690px;"><a href="https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t3/115+FUBON+Q1-Q2" target="_blank"><img class="slideHomePic" src="https://netbank.hncb.com.tw/netbank/pages/images/notice/Loan_1151231_071_1.jpg" alt=""></a></li><li style="float: left; list-style: none; position: relative; width: 690px;"><a href="https://camp.hncb.com.tw/weba071-0008/" target="_blank"><img class="slideHomePic" src="https://netbank.hncb.com.tw/netbank/pages/images/notice/Loan_1151231_071_1.jpg" alt=""></a></li><li style="float: left; list-style: none; position: relative; width: 690px;"><img class="slideHomePic" src="https://netbank.hncb.com.tw/netbank/pages/images/notice/10910_071_3.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 690px;" class="bx-clone"><a href="https://svc.tabf.org.tw/115hncb02" target="_blank"><img class="slideHomePic" src="https://netbank.hncb.com.tw/netbank/pages/images/notice/Loan_1151231_071_1.jpg" alt=""></a></li></ul></div><div class="bx-controls bx-has-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="1" class="bx-pager-link active">2</a></div><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="3" class="bx-pager-link">4</a></div><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="4" class="bx-pager-link">5</a></div></div></div></div>
+		</div>
+        <div class="login"> 
+          <h3><span>網路銀行/個人用戶</span></h3>          
+		  <div style="margin:3px 0 0 160px; font-size:14px;">
+		  <span id="littleKeyboard" style="color:blue;">開啟小鍵盤</span>&nbsp;
+		  <img src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/images/bt_login.gif">&nbsp;<a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=first&amp;Recognition=private">首次簽入</a></div><hr style="margin-top:0;">
+          <div class="input_box_private">
+            <input class="text_bar" name="USERIDTEXT" id="USERIDTEXT" value="" type="text" maxlength="10" autocomplete="off" placeholder="請輸入身分證字號">
+            
+            <input name="cbUsrid" type="checkbox" value="checkbox" id="list_a1">
+            <label for="list_a1">記住</label>
+            <!-- 加入隱碼 -->  
+			<input name="cbUSERIDVisiable" type="checkbox" id="list_a2">
+            <label id="label_list_a2" for="list_a2">隱碼</label>      
+          </div>
+          <div class="input_box_private">
+            <input class="text_bar" name="NICKNAME" id="NICKNAME" type="text" maxlength="10" autocomplete="off" placeholder="請輸入您的代號">
+            <input name="cbNickname" type="checkbox" id="list_b1">
+            <label for="list_b1">記住</label> 
+            <a class="text_r">提示</a> 
+            <!-- 加入隱碼 -->                          
+          </div>  
+          <div class="input_box_private">
+          	<div class="input_box_witheye">          	
+          		<input class="input_box_witheye input" name="PASSWORD" id="password" type="password" minlength="8" maxlength="16" autocomplete="off" placeholder="請輸入8~16位密碼">
+          		<img class="eye-icon" src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/images/eye-closed.svg" id="password_mask">
+          	</div>          	            
+          </div>
+		  <div class="input_box_private" style="padding-top:2px;padding-bottom:0px;">
+		  <div style="float:left;"><input name="TrxCaptchaKey" type="text" class="text_bar_private" id="TrxCaptchaKey" size="5" maxlength="4" value="" placeholder="圖形驗證碼"></div>
+		  <div style="float:center;"><img src="https://netbank.hncb.com.tw/netbank/pages/jsp/html/CaptchaImage_2.jsp" id="code_Cap" name="code_Cap" height="30" width="80">&nbsp;&nbsp;<a type="button">重新產生</a></div>
+		  </div>
+		  <div style="float:left;padding-left:25px">
+          <ul class="main_btn_private main_btn">
+            <li id="WannaLogin" class="btn_r"><a>確定登入</a></li>
+            <li id="cancelData" class="btn_w"><a type="button" id="resetBottun">清除重填</a></li>            
+          </ul> 
+		  </div>
+        </div>    
+      </div>
+      <div class="clearfix">
+        <div class="books">
+          <h2>必讀手冊</h2>
+		  
+          <div class="list_box">
+            <ul>
+			<!--<marquee direction="up"   scrollamount="3" onMouseOver="this.stop()" onMouseOut="this.start()"   height="210px">-->
+              <!--<li class="clearfix"><span>1</span><a href="http://www.hncb.com.tw/wps/portal/HNCB/per_finance/area2/digital/cor_ebanking" target="_blank">使用網路銀行安全小秘訣</a></li>-->
+              <!--<li class="clearfix"><span>2</span><a href="http://www.hncb.com.tw/wps/portal/HNCB/per_finance/area2/digital/cor_ebanking#個人網路銀行Q & A" target="_blank">交易限額</a></li>-->
+              <li class="clearfix"><span>1</span><a href="https://netbank.hncb.com.tw/netbank/pages/images/notice/autoprocsys.html" target="_blank">電子帳簿自動遞送服務功能說明....</a></li>
+              <li class="clearfix"><span>2</span><a href="http://www.hncb.com.tw/ibankqa/index.shtml" target="_blank">網銀小秘書</a></li>
+			  <!--<li class="clearfix"><span>5</span><a onClick="document.all.navigation.style.display=(document.all.navigation.style.display =='none') ? '' : 'none'" onMouseOver="this.style.cursor='hand'">新手上路</a></li>
+			  <div id="navigation" style="display:none;margin-left:25%;">
+					<a href="https://campaign.hncb.com.tw/ibh/personal.html" target="_blank">個人網路銀行導覽</a><br />
+					<a href="http://www.hncb.com.tw/ibankqa/HNCBibankManual.pdf" target="_blank">個人網路銀行操作說明手冊</a><br />
+					<a href="https://campaign.hncb.com.tw/ibh/crop_nonlogin.html" target="_blank">企業網路銀行導覽</a>
+			  </div>-->
+			  <li class="clearfix"><span>3</span><a href="http://www.hncb.com.tw/ibankqa/LoginLogout.shtml" target="_blank">忘記密碼與代號了嗎</a></li>
+			  <li class="clearfix"><span>4</span><a href="https://netbank.hncb.com.tw/netbank/pages/jsp/Time/html/time_edit.jsp" target="_blank">交易時間列表</a></li>
+			 <!--</marquee>-->
+            </ul>
+             <!--<ol class="page clearfix">
+              <li class="activation"><a href="javascript:void( 0 )">1</a></li>
+              <li><a href="javascript:void( 0 )">2</a></li>
+            </ol>-->
+          </div>
+
+        </div>
+        <div class="download">
+          <h2>軟體下載</h2>
+          <div class="list_box">
+            <ul>
+              <li class="clearfix"><span>1</span><a href="https://event.hncb.com.tw/ibankqa/cfca_nonset_tw.shtml" target="_blank">憑證小秘書</a></li>
+              <!--<li class="clearfix"><span>2</span><a href="/netbank/pages/jsp/edi/certific.sec">金融EDI憑證</a></li>-->
+              <!--<li class="clearfix"><span>3</span><a href="/netbank/pages/jsp/edi/OperationManual.doc">金融EDI新憑證載入操作手冊</a></li>-->
+            </ul>
+          </div>
+        </div> 
+        <div class="link">
+          <h2>快速連結</h2>
+          <div class="list_box">
+            <ul class="clearfix">
+			  <li><a href="https://pfpa.hncb.com.tw/pfpaip/web/" class="link_03">線上申請專區</a></li>
+			  <li><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.efee.trx.EfFeeLogin&amp;state=prompt" class="link_06" target="_blank">e手包辦<br>繳費網</a></li>
+			  <li><a href="https://www.hnpoint.com.tw/" class="link_05" target="_blank">華得來點數<br>兌換平台</a></li>
+			  <li><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private#" class="link_04">網路ATM</a></li>
+              <!--<li><a href="http://www.hncb.com.tw/wps/portal/HNCB/" class="link_01" target="_blank">理財資訊</a></li>-->
+              <!--<li><a href="http://www.hncb.com.tw/wps/portal/HNCB/" class="link_02" target="_blank">理財試算</a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="private_main clearfix">
+        <div class="private_left">
+          <h2 class="title"><span>公告事項<em></em></span><a class="more" id="showmore">More</a></h2>
+          <ul class="news_page">
+		  
+            <li><img src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<font color="red"><b>親愛的華銀客戶您好，為強化您與貴機構使用本行網路銀行的資料傳輸安全，將於114年8月15日(五)起，陸續關閉舊式加密的連線方式。若您仍使用較舊的瀏覽器或OS作業系統，將出現無法連線或顯示相關安全提示。請盡速更新您的網頁瀏覽器，以持續享有本行提供順暢與安全的數位服務，感謝您的理解與支持，華南銀行關心您！</b></font></li>
+            
+            <li><img src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.tw/netbank/pages/images/notice/BHO_MANUAL.pdf" target="_blank"><font color="RED">網路銀行BHO元件安裝說明操作手冊。</font></a></li>
+            
+            <li><img src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.tw/netbank/pages/images/notice/BHO.html" target="_blank">網路銀行單筆轉帳與整批多筆轉帳BHO元件下載</a></li>
+            
+          </ul>
+        </div>
+        <div class="private_right">
+          <h2 class="title"><span>華南榮耀<em></em></span></h2>
+		  <div class="slides_container">
+			<div class="bx-wrapper" style="max-width: 320px;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 190px;"><ul id="slides_award2" style="width: 715%; position: relative; transition-duration: 0.5s; transform: translate3d(-960px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/Notice/eAsia_p_s.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/Notice/eAsia_p_s.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/Notice/award_p_s.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/Notice/tax_p_s.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/Notice/eAsia_p_s.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/Notice/eAsia_p_s.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/Notice/eAsia_p_s.jpg" alt=""></li></ul></div><div class="bx-controls bx-has-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="2" class="bx-pager-link active">3</a></div><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="3" class="bx-pager-link">4</a></div><div class="bx-pager-item"><a href="https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.Login&amp;state=prompt&amp;Recognition=private" data-slide-index="4" class="bx-pager-link">5</a></div></div></div></div>
+		  </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="footer"> 
+    <div class="wrapper">
+	<table>
+	<tbody><tr>
+	<td>
+      <ul class="nav clearfix">        
+        <li><a href="http://www.hncb.com.tw/wps/portal/HNCB/footer/info_program" target="_blank">客戶資料保密措施</a></li>
+        <li><a href="http://www.hncb.com.tw/wps/portal/HNCB/footer/disclaimer" target="_blank">免責聲明</a></li>
+		<li><a href="http://www.hncb.com.tw/wps/portal/HNCB/footer/privacy" target="_blank">網站隱私權保護聲明</a></li>
+      </ul>
+      <p>24小時客服中心：(02) 2181-0101　<a href="https://netbank.hncb.com.tw/">https://netbank.hncb.com.tw</a>　版權所有 華南銀行</p>
+      <p>建議瀏覽器版本：Microsoft Edge、Google Chrome、Safari及FireFox。解析度1024x768</p>
+	  <p>華南商業銀行股份有限公司｜統編 03742301</p>
+	</td>
+	<td>
+	<a href="https://www.cdic.gov.tw/main_ch/chinese.html" target="_blank">
+	　<img src="https://netbank.hncb.com.tw/netbank/pages/jsp/Login/html/images/cdic_logo.jpeg" alt=""></a>
+	</td>
+	</tr>
+	</tbody></table>
+    </div>
+  </div>
+</div>
+</form>
+</div>
+
+<i id="pwdInfo" class="fa fa-info-circle" style="top: 286.815px; left: 1187.8px;"></i>
+<div id="pwdInfoContent" style="top: 647.63px; left: 1955.6px;"><p>密碼說明</p><hr><ol><li>密碼長度為8~16位</li><li>可為半形之英文、數字或!@#$%^&amp;*()等符號</li><li>英文字大小寫視為不同</li></ol></div>
+
+
+
+
+
+
+
+</body></html><!-- 小鍵盤 end -->
