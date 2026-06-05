@@ -14,13 +14,13 @@
 
 .bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item { display: inline-block; }
 
-.bx-wrapper .bx-pager.bx-default-pager a { display: block; width: 12px; height: 12px; text-indent: -1500px; background: url("/images/page.png") left bottom; margin-right: 5px; }
+.bx-wrapper .bx-pager.bx-default-pager a { display: block; width: 12px; height: 12px; text-indent: -1500px; background: url("../images/page.png") left bottom; margin-right: 5px; }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active { background-position: left top; }
 
-.bx-wrapper .bx-prev { left: 10px; background: url("/images/controls.png") 0px -32px no-repeat; }
+.bx-wrapper .bx-prev { left: 10px; background: url("../images/controls.png") 0px -32px no-repeat; }
 
-.bx-wrapper .bx-next { right: 10px; background: url("/images/controls.png") -43px -32px no-repeat; }
+.bx-wrapper .bx-next { right: 10px; background: url("../images/controls.png") -43px -32px no-repeat; }
 
 .bx-wrapper .bx-prev:hover { background-position: 0px 0px; }
 
@@ -32,11 +32,11 @@
 
 .bx-wrapper .bx-controls-auto { text-align: center; }
 
-.bx-wrapper .bx-controls-auto .bx-start { display: block; text-indent: -9999px; width: 10px; height: 11px; outline: 0px; background: url("/images/controls.png") -86px -11px no-repeat; margin: 0px 3px; }
+.bx-wrapper .bx-controls-auto .bx-start { display: block; text-indent: -9999px; width: 10px; height: 11px; outline: 0px; background: url("../images/controls.png") -86px -11px no-repeat; margin: 0px 3px; }
 
 .bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active { background-position: -86px 0px; }
 
-.bx-wrapper .bx-controls-auto .bx-stop { display: block; text-indent: -9999px; width: 9px; height: 11px; outline: 0px; background: url("/images/controls.png") -86px -44px no-repeat; margin: 0px 3px; }
+.bx-wrapper .bx-controls-auto .bx-stop { display: block; text-indent: -9999px; width: 9px; height: 11px; outline: 0px; background: url("../images/controls.png") -86px -44px no-repeat; margin: 0px 3px; }
 
 .bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active { background-position: -86px -33px; }
 

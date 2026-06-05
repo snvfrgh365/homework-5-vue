@@ -24,7 +24,7 @@ defineProps({
           </td>
           <td>
             <p><a href="https://www.cdic.gov.tw/main_ch/index.aspx" target="_blank">
-            　 <img src="/images/cdic_logo.jpeg" alt=""></a></p>
+            　 <img src="images/cdic_logo.jpeg" alt=""></a></p>
           </td>
           </tr>
           </tbody>
@@ -46,7 +46,7 @@ defineProps({
           </td>
           <td>
             <p><a href="https://www.cdic.gov.tw/main_en/english.html" target="_blank">
-            　 <img src="/images/cdic_logo.jpeg" alt=""></a></p>
+            　 <img src="images/cdic_logo.jpeg" alt=""></a></p>
           </td>
           </tr>
           </tbody>
@@ -67,7 +67,7 @@ defineProps({
           </td>
           <td>
             <p><a href="https://www.cdic.gov.tw/main_ch/index.aspx" target="_blank">
-            　 <img src="/images/cdic_logo.jpeg" alt=""></a></p>
+            　 <img src="images/cdic_logo.jpeg" alt=""></a></p>
           </td>
           </tr>
           </tbody>

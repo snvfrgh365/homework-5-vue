@@ -2,11 +2,11 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const slides = [
-  { id: 1, src: '/images/hr_20260323_061_2.png', link: 'https://svc.tabf.org.tw/115hncb02' },
-  { id: 2, src: '/images/hr_20260323_061_1.png', link: 'https://svc.tabf.org.tw/115hncb01' },
-  { id: 3, src: '/images/Loan_1151231_071_1.jpg', link: 'https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t3/115+FUBON+Q1-Q2' },
-  { id: 4, src: '/images/Loan_1151231_071_1.jpg', link: 'https://camp.hncb.com.tw/weba071-0008/' },
-  { id: 5, src: '/images/10910_071_3.jpg', link: '' }
+  { id: 1, src: 'images/hr_20260323_061_2.png', link: 'https://svc.tabf.org.tw/115hncb02' },
+  { id: 2, src: 'images/hr_20260323_061_1.png', link: 'https://svc.tabf.org.tw/115hncb01' },
+  { id: 3, src: 'images/Loan_1151231_071_1.jpg', link: 'https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t3/115+FUBON+Q1-Q2' },
+  { id: 4, src: 'images/Loan_1151231_071_1.jpg', link: 'https://camp.hncb.com.tw/weba071-0008/' },
+  { id: 5, src: 'images/10910_071_3.jpg', link: '' }
 ]
 
 const currentIndex = ref(0)

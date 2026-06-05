@@ -66,7 +66,7 @@ const showPasswordInfo = (e) => {
         <template v-else-if="lang === 'en'">open virtual keyboard</template>
         <template v-else-if="lang === 'cn'">开启小键盘</template>
       </span>&nbsp;
-      <img src="/images/bt_login.gif">&nbsp;
+      <img src="images/bt_login.gif">&nbsp;
       <a href="#">
         <template v-if="lang === 'tw'">首次簽入</template>
         <template v-else-if="lang === 'en'">First Time Login</template>
@@ -94,7 +94,7 @@ const showPasswordInfo = (e) => {
       <div class="input_box_witheye" style="position: relative; overflow: visible;">          	
         <input class="input_box_witheye input" v-model="form.password" :type="showPassword ? 'text' : 'password'" minlength="8" maxlength="16" autocomplete="off" :placeholder="lang === 'en' ? 'Please enter Password !' : (lang === 'cn' ? '请输入8~16位密码' : '請輸入8~16位密碼')">
         <button type="button" class="pwd-exclaim" style="position: absolute; right: 34px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; border-radius: 50%; border: none; background: #c62828; color: #fff; font-weight: bold; line-height: 24px; text-align: center; cursor: pointer; z-index: 1000; font-size: 14px;" @click.prevent="showPasswordInfo">i</button>
-        <img class="eye-icon" src="/images/eye-closed.svg" @click="togglePassword" :style="{ opacity: showPassword ? 0.5 : 1, right: '6px', zIndex: 900 }">
+        <img class="eye-icon" src="images/eye-closed.svg" @click="togglePassword" :style="{ opacity: showPassword ? 0.5 : 1, right: '6px', zIndex: 900 }">
       </div>          	            
     </div>
     

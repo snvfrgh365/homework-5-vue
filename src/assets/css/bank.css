@@ -18,7 +18,7 @@ body { font-family: arial, 敺株?甇??擃? font-size: 14px; line-height: 20px; 
 
 .header { padding: 10px 0px; font-size: 12px; height: 60px; }
 
-.content { min-height: 1150px; background: url("/images/content_bg.jpg") center top repeat-x rgb(245, 245, 242); }
+.content { min-height: 1150px; background: url("../images/content_bg.jpg") center top repeat-x rgb(245, 245, 242); }
 
 /* (additional rules from css.css omitted for brevity) */
 

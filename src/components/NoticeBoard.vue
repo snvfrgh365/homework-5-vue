@@ -9,11 +9,11 @@ defineProps({
 })
 
 const awardSlides = [
-  { id: 1, src: '/images/tax_p_s.jpg' },
-  { id: 2, src: '/images/eAsia_p_s.jpg' },
-  { id: 3, src: '/images/award_p_s.jpg' },
-  { id: 4, src: '/images/tax_p_s.jpg' },
-  { id: 5, src: '/images/eAsia_p_s.jpg' }
+  { id: 1, src: 'images/tax_p_s.jpg' },
+  { id: 2, src: 'images/eAsia_p_s.jpg' },
+  { id: 3, src: 'images/award_p_s.jpg' },
+  { id: 4, src: 'images/tax_p_s.jpg' },
+  { id: 5, src: 'images/eAsia_p_s.jpg' }
 ]
 
 const currentAwardIndex = ref(0)
@@ -55,9 +55,9 @@ onUnmounted(() => {
       <div class="private_left">
         <h2 class="title"><span>公告事項<em></em></span><a class="more" id="showmore">More</a></h2>
         <ul class="news_page">
-          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<font color="red"><b>親愛的華銀客戶您好，為強化您與貴機構使用本行網路銀行的資料傳輸安全，將於114年8月15日(五)起，陸續關閉舊式加密的連線方式。若您仍使用較舊的瀏覽器或OS作業系統，將出現無法連線或顯示相關安全提示。請盡速更新您的網頁瀏覽器，以持續享有本行提供順暢與安全的數位服務，感謝您的理解與支持，華南銀行關心您！</b></font></li>
-          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.twnotice/BHO_MANUAL.pdf" target="_blank"><font color="RED">網路銀行BHO元件安裝說明操作手冊。</font></a></li>
-          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.twnotice/BHO.html" target="_blank">網路銀行單筆轉帳與整批多筆轉帳BHO元件下載</a></li>
+          <li><img src="images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<font color="red"><b>親愛的華銀客戶您好，為強化您與貴機構使用本行網路銀行的資料傳輸安全，將於114年8月15日(五)起，陸續關閉舊式加密的連線方式。若您仍使用較舊的瀏覽器或OS作業系統，將出現無法連線或顯示相關安全提示。請盡速更新您的網頁瀏覽器，以持續享有本行提供順暢與安全的數位服務，感謝您的理解與支持，華南銀行關心您！</b></font></li>
+          <li><img src="images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.twnotice/BHO_MANUAL.pdf" target="_blank"><font color="RED">網路銀行BHO元件安裝說明操作手冊。</font></a></li>
+          <li><img src="images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.twnotice/BHO.html" target="_blank">網路銀行單筆轉帳與整批多筆轉帳BHO元件下載</a></li>
         </ul>
       </div>
       <div class="private_right">
@@ -89,9 +89,9 @@ onUnmounted(() => {
       <div class="private_left">
         <h2 class="title"><span>公告事项<em></em></span><a class="more" id="showmore">More</a></h2>
         <ul class="news_page">
-          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<font color="red"><b>親愛的華銀客戶您好，為強化您與貴機構使用本行網路銀行的資料傳輸安全，將於114年8月15日(五)起，陸續關閉舊式加密的連線方式。若您仍使用較舊的瀏覽器或OS作業系統，將出現無法連線或顯示相關安全提示。請盡速更新您的網頁瀏覽器，以持續享有本行提供順暢與安全的數位服務，感謝您的理解與支持，華南銀行關心您！</b></font></li>
-          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.tw/netbank/pages/images/notice/BHO_MANUAL.pdf" target="_blank"><font color="RED">網路銀行BHO元件安裝說明操作手冊。</font></a></li>
-          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.tw/netbank/pages/images/notice/BHO.html" target="_blank">網路銀行單筆轉帳與整批多筆轉帳BHO元件下載</a></li>
+          <li><img src="images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<font color="red"><b>親愛的華銀客戶您好，為強化您與貴機構使用本行網路銀行的資料傳輸安全，將於114年8月15日(五)起，陸續關閉舊式加密的連線方式。若您仍使用較舊的瀏覽器或OS作業系統，將出現無法連線或顯示相關安全提示。請盡速更新您的網頁瀏覽器，以持續享有本行提供順暢與安全的數位服務，感謝您的理解與支持，華南銀行關心您！</b></font></li>
+          <li><img src="images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.tw/netbank/pages/images/notice/BHO_MANUAL.pdf" target="_blank"><font color="RED">網路銀行BHO元件安裝說明操作手冊。</font></a></li>
+          <li><img src="images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.tw/netbank/pages/images/notice/BHO.html" target="_blank">網路銀行單筆轉帳與整批多筆轉帳BHO元件下載</a></li>
         </ul>
       </div>
       <div class="private_right">
