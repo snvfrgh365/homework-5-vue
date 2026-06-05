@@ -9,38 +9,82 @@ defineProps({
 
 <template>
   <div class="private_main clearfix">
-    <template v-if="lang === 'tw' || lang === 'cn'">
-      <table width="96%" border="0" cellspacing="0" cellpadding="3">
-        <tbody>
-          <tr class="content12gy">
-            <td>
-              <table border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                  <tr>
-                    <td width="4" height="4" align="center" class="title12rdb"><img src="https://netbank.hncb.com.tw/netbank/pages/images/login_SGU/titlearea_bgl.gif" width="4" height="23"></td>
-                    <td width="80" align="center" background="https://netbank.hncb.com.tw/netbank/pages/images/login_SGU/titlearea_bg.gif"><span class="title20bg">{{ lang === 'cn' ? '重要公告' : '重要公告' }} </span></td>
-                    <td width="4"><img src="https://netbank.hncb.com.tw/netbank/pages/images/login_SGU/titlearea_bgr.gif" width="900px" height="23"></td>
-                    <td background="https://netbank.hncb.com.tw/netbank/pages/images/login_SGU/titlebar_bg.gif">&nbsp;</td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-          <tr class="content12gy">
-            <td valign="top"><img src="https://netbank.hncb.com.tw/netbank/pages/images/login_SGU/icon_cross2.gif" width="7" height="7" hspace="4" vspace="4" align="absmiddle">{{ lang === 'cn' ? '安全提示：为了保障您的网路交易安全，' : '安全提示：為了保障您的網路交易安全，' }}<br>
-              <ol>
-                <table border="0" cellspacing="0" cellpadding="0">
-                  <tbody>
-                    <tr><td align="right" width="15" valign="top">1.</td><td>{{ lang === 'cn' ? '密码勿告知他人：本行绝对不会以任何方式要求您告知网路银行密码。' : '密碼勿告知他人：本行絕對不會以任何方式要求您告知網路銀行密碼。' }}</td></tr>
-                    <tr><td align="right" width="15" valign="top">2.</td><td>{{ lang === 'cn' ? '请自行输入网址：勿透过电子邮件或其他网站上之连结连至网路银行。' : '請自行輸入網址：勿透過電子郵件或其他網站上之連結連至網路銀行。' }}</td></tr>
-                  </tbody>
-                </table>
-              </ol>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <template v-if="lang === 'tw'">
+      <div class="private_left">
+        <h2 class="title"><span>公告事項<em></em></span><a class="more" id="showmore">More</a></h2>
+        <ul class="news_page">
+          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<font color="red"><b>親愛的華銀客戶您好，為強化您與貴機構使用本行網路銀行的資料傳輸安全，將於114年8月15日(五)起，陸續關閉舊式加密的連線方式。若您仍使用較舊的瀏覽器或OS作業系統，將出現無法連線或顯示相關安全提示。請盡速更新您的網頁瀏覽器，以持續享有本行提供順暢與安全的數位服務，感謝您的理解與支持，華南銀行關心您！</b></font></li>
+          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.twnotice/BHO_MANUAL.pdf" target="_blank"><font color="RED">網路銀行BHO元件安裝說明操作手冊。</font></a></li>
+          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.twnotice/BHO.html" target="_blank">網路銀行單筆轉帳與整批多筆轉帳BHO元件下載</a></li>
+        </ul>
+      </div>
+      <div class="private_right">
+        <h2 class="title"><span>華南榮耀<em></em></span></h2>
+        <div class="slides_container">
+          <div class="bx-wrapper" style="max-width: 320px;">
+            <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 190px;">
+              <ul id="slides_award2" style="width: 715%; position: relative; transition-duration: 0.5s; transform: translate3d(-960px, 0px, 0px);">
+                <li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/award_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/tax_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+              </ul>
+            </div>
+            <div class="bx-controls bx-has-pager">
+              <div class="bx-pager bx-default-pager">
+                <div class="bx-pager-item"><a href="#" data-slide-index="0" class="bx-pager-link">1</a></div>
+                <div class="bx-pager-item"><a href="#" data-slide-index="1" class="bx-pager-link">2</a></div>
+                <div class="bx-pager-item"><a href="#" data-slide-index="2" class="bx-pager-link active">3</a></div>
+                <div class="bx-pager-item"><a href="#" data-slide-index="3" class="bx-pager-link">4</a></div>
+                <div class="bx-pager-item"><a href="#" data-slide-index="4" class="bx-pager-link">5</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </template>
+
+    <template v-else-if="lang === 'cn'">
+      <div class="private_left">
+        <h2 class="title"><span>公告事项<em></em></span><a class="more" id="showmore">More</a></h2>
+        <ul class="news_page">
+          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<font color="red"><b>親愛的華銀客戶您好，為強化您與貴機構使用本行網路銀行的資料傳輸安全，將於114年8月15日(五)起，陸續關閉舊式加密的連線方式。若您仍使用較舊的瀏覽器或OS作業系統，將出現無法連線或顯示相關安全提示。請盡速更新您的網頁瀏覽器，以持續享有本行提供順暢與安全的數位服務，感謝您的理解與支持，華南銀行關心您！</b></font></li>
+          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.tw/netbank/pages/images/notice/BHO_MANUAL.pdf" target="_blank"><font color="RED">網路銀行BHO元件安裝說明操作手冊。</font></a></li>
+          <li><img src="/images/list_icon.png" hspace="0" vspace="0" align="middle">&nbsp;&nbsp;<a href="https://netbank.hncb.com.tw/netbank/pages/images/notice/BHO.html" target="_blank">網路銀行單筆轉帳與整批多筆轉帳BHO元件下載</a></li>
+        </ul>
+      </div>
+      <div class="private_right">
+        <h2 class="title"><span>华南荣耀<em></em></span></h2>
+        <div class="slides_container">
+          <div class="bx-wrapper" style="max-width: 320px;">
+            <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 190px;">
+              <ul id="slides_award2" style="width: 715%; position: relative; transition-duration: 0.5s; transform: translate3d(-960px, 0px, 0px);">
+                <li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/award_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/tax_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+                <li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+              </ul>
+            </div>
+            <div class="bx-controls bx-has-pager">
+              <div class="bx-pager bx-default-pager">
+                <div class="bx-pager-item"><a href="#" data-slide-index="0" class="bx-pager-link">1</a></div>
+                <div class="bx-pager-item"><a href="#" data-slide-index="1" class="bx-pager-link">2</a></div>
+                <div class="bx-pager-item"><a href="#" data-slide-index="2" class="bx-pager-link active">3</a></div>
+                <div class="bx-pager-item"><a href="#" data-slide-index="3" class="bx-pager-link">4</a></div>
+                <div class="bx-pager-item"><a href="#" data-slide-index="4" class="bx-pager-link">5</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+    
     <template v-else-if="lang === 'en'">
       <table width="96%" border="0" cellspacing="0" cellpadding="3">
         <tbody>
