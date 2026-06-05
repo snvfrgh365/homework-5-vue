@@ -1,113 +1,104 @@
-# 作業5 Vue 單一檔案元件 SFCs - 華南網銀釣魚網站改寫
+# 作業5 Vue 單一檔案元件 (SFCs) 實作報告
 
 **姓名**：[請填寫您的姓名]  
 **班級**：[請填寫您的班級]  
-**網站標題**：華南銀行網路銀行 - SFCs 改寫版  
-**GitHub Pages 連結**：https://[您的GitHub帳號].github.io/vue-sfc/  
-**GitHub Repo**：https://github.com/[您的GitHub帳號]/vue-sfc  
+**網站標題**：釣魚網站 (華南銀行個人網路銀行) Vue 重構版  
 
 ---
 
-## 一、專案目標與執行流程
+## 一、 專案執行流程與畫面說明
 
-本次作業的目標是將原本以純 HTML、CSS、JS 構成的「華南網銀釣魚網站（作業3）」，改寫為由 **Vue SFC (Single File Components)** 組成的現代前端專案架構。我們將介面拆解成數個獨立元件，並保持 `index.html` 與 `main.js` 的乾淨度。
+本次作業的目標是將原本混雜了大量 HTML、CSS 與原生 JavaScript 操作的釣魚網站 (作業3)，徹底改寫為現代化的 **Vue 3 單一檔案元件 (SFC)** 架構。
 
-### 執行流程：
-1. **建立 Vue 專案**：使用 Vite 建立名為 `vue-sfc` 的專案目錄 (`npm create vue@latest`)。
-2. **遷移靜態資源**：將原本提取出的 CSS (例如 `css.css`, `keyboard.css`) 及圖片 (例如 `logo.gif`, `banner.jpg`) 移至專案的 `public/` 目錄中，讓 Vue 可以直接存取。
-3. **拆解與實作元件**：把原本龐大的 `bank.html` 依照版面結構拆分成 5 大 Vue 獨立元件，並存放於 `src/components/` 資料夾下。
-4. **App.vue 整合**：在 `App.vue` 引入上述建立好的元件，完成整個畫面的組裝。
-5. **部署設定**：設定 `vite.config.js` 的 `base` 路徑，並建立 `.github/workflows/deploy.yml` 讓 GitHub Actions 能自動發布到 GitHub Pages。
+### 步驟 1：建立 Vue 專案與環境設定
+1. 使用 `npm create vue@latest` 建立基礎專案。
+2. 安裝並設定 `vue-router`，透過路由 `/`、`/en`、`/cn` 來控制網站的多國語系切換，取代過去需要三份實體 HTML 檔案 (`bank.html`, `bank_en.html`, `bank_cn.html`) 的作法。
+3. 將原有的全域 CSS (`css.css`, `keyboard.css` 等) 引入 `main.js` 或 `index.html` 中，保持入口檔案乾淨。
 
----
+### 步驟 2：版面拆解與元件化
+我將整個網站的 UI 拆解成多個可複用的 Vue 元件 (放置於 `src/components/` 下)，並且統一接收 `lang` (語系) 的 Props，讓元件可以根據當前路由自動變換語言文字。
 
-## 二、元件架構介紹
+*(此處請附上您的網站首頁截圖：例如：`![網站首頁](您的截圖路徑.png)`)*
 
-我們將整個網站的 UI 切割成以下幾個功能獨立的 Vue SFC 元件：
+### 步驟 3：互動邏輯 Vue 化
+原本 `bank.js` 裡充斥著 `document.getElementById` 等直接操作 DOM 的程式碼。在 Vue 的世界裡，我們改用「資料驅動視圖」的概念：
+- 使用 `ref` 與 `reactive` 定義狀態 (如密碼是否顯示、小鍵盤是否開啟)。
+- 使用 `v-model` 雙向綁定表單輸入框。
+- 使用 `v-if` / `v-show` 搭配條件判斷來控制 DOM 的顯示與隱藏。
 
-### 1. `AppHeader.vue` (頁首區域)
-負責顯示華南銀行的 Logo 以及上方的快速導覽連結（例如：語言切換、企業網銀、華南金控）。這部分抽離出來後，使得整體版面的頭部邏輯更為清晰。
-
-### 2. `ImageSlider.vue` (左側輪播圖)
-原本這區塊依賴外部的 bxslider 程式庫，現在我們改用 Vue 原生的資料驅動 (Data-driven) 方式。
-- **作法**：使用 `v-for` 渲染圖片列表，並透過 `setInterval` 計時器自動改變 `currentIndex` 來達成輪播效果。滑鼠移入時會暫停計時。
-
-### 3. `LoginForm.vue` (核心登入表單)
-包含使用者身分證字號、代號、密碼輸入框以及圖形驗證碼。
-- **作法**：
-  - 使用 `v-model` 綁定輸入資料。
-  - 密碼框的「顯示/隱藏」功能改用 Vue 的狀態切換 (`type="text"` 或 `type="password"`) 達成，拋棄了原本複雜的 DOM 操作。
-  - 實作了「清除重填」的方法 (`resetForm`)，點擊後會把綁定的變數清空。
-
-### 4. `QuickLinks.vue` (快速連結區塊)
-負責登入表單下方的三欄式連結：**必讀手冊**、**軟體下載** 與 **快速連結**。這個元件是純靜態展示，主要目的是為了避免 `App.vue` 中的 HTML 結構過度肥大。
-
-### 5. `NoticeBoard.vue` (公告與榮耀區塊)
-負責網頁最下方版面的「公告事項」文字列表與右側的「華南榮耀」圖片輪播區塊。
-- **作法**：跟 `ImageSlider` 類似，我們同樣使用了 Vue 的響應式資料與計時器來實作小型的自動輪播展示。
-
-### 6. `AppFooter.vue` (頁腳區域)
-包含頁面底部的版權聲明、聯絡資訊以及存款保險的標誌。
+*(此處請附上小鍵盤開啟時的截圖：例如：`![虛擬小鍵盤畫面](您的截圖路徑.png)`)*
 
 ---
 
-## 三、如何用元件構成整個網站？
+## 二、 網站元件介紹與架構解析
 
-經過上述的拆解後，我們可以看看原本複雜的 HTML 是如何在 `App.vue` 中被優雅地組合起來：
+為了解決原本架構過於龐大難以維護的問題，我將網站拆分成以下核心元件：
 
-```vue
-<script setup>
-// 引入所有子元件
-import AppHeader from './components/AppHeader.vue'
-import ImageSlider from './components/ImageSlider.vue'
-import LoginForm from './components/LoginForm.vue'
-import QuickLinks from './components/QuickLinks.vue'
-import NoticeBoard from './components/NoticeBoard.vue'
-import AppFooter from './components/AppFooter.vue'
-</script>
+### 1. `AppHeader.vue` (網站頭部)
+負責顯示網站的 Logo 以及右上角的語系切換導覽列。
+透過 `<router-link>`，點擊 English 或 简体中文 時，會透過 Vue Router 無縫切換路由，避免畫面重新整理。
 
-<template>
-  <div class="private">
-    <!-- 頁首 -->
-    <AppHeader />
-    
-    <div class="content">
-      <div class="wrapper">
-        <div class="login_box clearfix">
-          <!-- 左側輪播圖與右側登入表單 -->
-          <ImageSlider />
-          <LoginForm />
-        </div>
-        
-        <!-- 三欄式連結 -->
-        <QuickLinks />
-        
-        <!-- 公告事項與華南榮耀 -->
-        <NoticeBoard />
-      </div>
-    </div> 
-    
-    <!-- 頁腳 -->
-    <AppFooter />
-  </div>
-</template>
+### 2. `LoginForm.vue` (登入表單核心)
+這是本專案最核心的元件，負責處理：
+- 身分證字號、代號、密碼的雙向綁定 (`v-model`)。
+- 圖形驗證碼的重新產生功能 (`@click` 觸發更換圖片 src)。
+- **觸發小鍵盤**：透過 `$emit` 或全域狀態呼叫小鍵盤開啟。
+- **密碼提示框**：點擊 `(i)` 時觸發顯示密碼提示。
 
-<style>
-/* 匯入所有全域 CSS 以套用原本的樣式 */
-@import url('/css/css.css');
-@import url('/css/keyboard.css');
-@import url('/css/jquery-ui.min.css');
-@import url('/css/jquery.bxslider.css');
-@import url('/css/font-awesome.css');
+### 3. `VirtualKeyboard.vue` (虛擬小鍵盤)
+將原本幾百行的原生鍵盤邏輯封裝在此。
+- 利用陣列 `v-for` 渲染鍵盤按鈕。
+- 內部維護「大小寫狀態」(`capsLock`) 與「輸入值」。
+- 將點擊的字元透過原生事件或事件匯流排回傳給 `LoginForm.vue` 裡的密碼框。
 
-body {
-  margin: 0;
-  padding: 0;
-}
-</style>
-```
+### 4. `PasswordInfo.vue` (密碼說明提示框)
+純粹的展示型元件，透過 `v-if` 控制顯示。並會接收 `lang` Prop 來決定顯示繁體中文、英文或簡體中文的密碼規則。
 
-**教學小結**：
-透過 Vue 的組件化設計，主程式碼 `App.vue` 變得非常乾淨，只有像積木一樣的元件組合。`index.html` 中也只留下了 `<div id="app"></div>`，完全隔離了結構 (HTML)、樣式 (CSS) 與邏輯 (JavaScript) 的糾纏，達到了現代化網頁開發「關注點分離」的要求！
+### 5. `QuickLinks.vue` (快速連結與手冊)
+包含「必讀手冊」、「軟體下載」、「快速連結」三大區塊。
+透過 `v-if="lang === 'tw'"` 等判斷式，在英文版時隱藏不必要的資訊，在簡中版時替換為簡體字。
 
-*(請在此處插入截圖：展示 npm run dev 後本地運行的畫面，以及 GitHub Pages 成功部署的畫面)*
+### 6. `NoticeBoard.vue` (重要公告區)
+包含下方的安全提示與系統公告。同理，利用 `v-if` 判斷當前語系，呈現出原本 `bank_en.html` 與 `bank.html` 完全不同的排版與內容。
+
+### 7. `AppFooter.vue` (網站頁尾)
+負責顯示版權宣告、客服專線與相關圖示。
+
+---
+
+## 三、 元件如何構成整個網站 (組裝方式)
+
+在 Vue SFC 的架構下，所有的元件最終都會在「頁面元件 (Views)」中被組合起來。
+
+我的組裝邏輯如下：
+1. **`src/App.vue`** (根節點)
+   作為整個應用的入口，內部只放置 `<RouterView />` 以及全域的浮動元件 (`<VirtualKeyboard />` 和 `<PasswordInfo />`)。
+
+2. **`src/views/Home.vue`** (首頁骨架)
+   這是由 Router 載入的主要頁面。在此檔案中，我引入了所有拆分好的子元件，並將路由取得的語系變數傳遞下去：
+   ```vue
+   <template>
+     <div class="private">
+       <!-- 傳遞 lang prop 給所有子元件 -->
+       <AppHeader :lang="currentLang" />
+       
+       <div class="content">
+         <div class="wrapper">
+           <div class="login_box clearfix">
+             <!-- 左側輪播圖保留 -->
+             <!-- 右側登入框 -->
+             <LoginForm :lang="currentLang" />
+           </div>
+           
+           <QuickLinks :lang="currentLang" />
+           <NoticeBoard :lang="currentLang" />
+         </div>
+       </div>
+       
+       <AppFooter :lang="currentLang" />
+     </div>
+   </template>
+   ```
+
+**總結教學**：
+透過這樣的元件化設計，未來若要修改「登入表單」，只需打開 `LoginForm.vue`；若要修改「公告」，只需編輯 `NoticeBoard.vue`。所有的 HTML、CSS 與 JS 都被高度內聚在各自的單一檔案中，這就是 Vue SFC 帶來的最大優勢！
