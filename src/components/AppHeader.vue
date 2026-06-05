@@ -1,13 +1,7 @@
-<script setup>
-// AppHeader Component
-</script>
-
 <template>
   <div class="header">
     <div class="wrapper clearfix">
-      <h1 class="logo text_none">
-        <a href="http://www.hncb.com.tw/" target="_blank">華南銀行</a>
-      </h1>
+      <h1 class="logo text_none"><a href="http://www.hncb.com.tw/" target="_blank">華南銀行</a></h1>
       <h2 class="text_none"><span>個人網路銀行</span></h2>
       <ul class="language">
         <li><a href="#">English</a></li>
@@ -20,7 +14,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-/* CSS is imported globally in App.vue to maintain original styling */
-</style>
