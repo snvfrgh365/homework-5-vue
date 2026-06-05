@@ -1,9 +1,51 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
 defineProps({
   lang: {
     type: String,
     default: 'tw'
   }
+})
+
+const awardSlides = [
+  { id: 1, src: '/images/tax_p_s.jpg' },
+  { id: 2, src: '/images/eAsia_p_s.jpg' },
+  { id: 3, src: '/images/award_p_s.jpg' },
+  { id: 4, src: '/images/tax_p_s.jpg' },
+  { id: 5, src: '/images/eAsia_p_s.jpg' }
+]
+
+const currentAwardIndex = ref(0)
+let awardTimer = null
+
+const nextAwardSlide = () => {
+  currentAwardIndex.value = (currentAwardIndex.value + 1) % awardSlides.length
+}
+
+const startAwardTimer = () => {
+  if (!awardTimer) {
+    awardTimer = setInterval(nextAwardSlide, 3000)
+  }
+}
+
+const stopAwardTimer = () => {
+  if (awardTimer) {
+    clearInterval(awardTimer)
+    awardTimer = null
+  }
+}
+
+const setAwardSlide = (index) => {
+  currentAwardIndex.value = index
+}
+
+onMounted(() => {
+  startAwardTimer()
+})
+
+onUnmounted(() => {
+  stopAwardTimer()
 })
 </script>
 
@@ -20,26 +62,22 @@ defineProps({
       </div>
       <div class="private_right">
         <h2 class="title"><span>華南榮耀<em></em></span></h2>
-        <div class="slides_container">
+        <div class="slides_container" @mouseenter="stopAwardTimer" @mouseleave="startAwardTimer">
           <div class="bx-wrapper" style="max-width: 320px;">
             <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 190px;">
-              <ul id="slides_award2" style="width: 715%; position: relative; transition-duration: 0.5s; transform: translate3d(-960px, 0px, 0px);">
-                <li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/award_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/tax_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+              <ul id="slides_award2" style="width: 100%; height: 100%; position: relative; padding: 0; margin: 0; list-style: none;">
+                <template v-for="(slide, index) in awardSlides" :key="slide.id">
+                  <li v-show="currentAwardIndex === index" style="list-style: none; position: absolute; width: 320px; top: 0; left: 0;">
+                    <img class="slideAward2Pic" :src="slide.src" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  </li>
+                </template>
               </ul>
             </div>
             <div class="bx-controls bx-has-pager">
               <div class="bx-pager bx-default-pager">
-                <div class="bx-pager-item"><a href="#" data-slide-index="0" class="bx-pager-link">1</a></div>
-                <div class="bx-pager-item"><a href="#" data-slide-index="1" class="bx-pager-link">2</a></div>
-                <div class="bx-pager-item"><a href="#" data-slide-index="2" class="bx-pager-link active">3</a></div>
-                <div class="bx-pager-item"><a href="#" data-slide-index="3" class="bx-pager-link">4</a></div>
-                <div class="bx-pager-item"><a href="#" data-slide-index="4" class="bx-pager-link">5</a></div>
+                <div v-for="(slide, index) in awardSlides" :key="'award-dot-'+slide.id" class="bx-pager-item">
+                  <a href="#" @click.prevent="setAwardSlide(index)" :class="['bx-pager-link', { active: currentAwardIndex === index }]">{{ slide.id }}</a>
+                </div>
               </div>
             </div>
           </div>
@@ -58,26 +96,22 @@ defineProps({
       </div>
       <div class="private_right">
         <h2 class="title"><span>华南荣耀<em></em></span></h2>
-        <div class="slides_container">
+        <div class="slides_container" @mouseenter="stopAwardTimer" @mouseleave="startAwardTimer">
           <div class="bx-wrapper" style="max-width: 320px;">
             <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 190px;">
-              <ul id="slides_award2" style="width: 715%; position: relative; transition-duration: 0.5s; transform: translate3d(-960px, 0px, 0px);">
-                <li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/award_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/tax_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
-                <li style="float: left; list-style: none; position: relative; width: 320px;" class="bx-clone"><img class="slideAward2Pic" src="/images/eAsia_p_s.jpg" alt=""></li>
+              <ul id="slides_award2" style="width: 100%; height: 100%; position: relative; padding: 0; margin: 0; list-style: none;">
+                <template v-for="(slide, index) in awardSlides" :key="slide.id">
+                  <li v-show="currentAwardIndex === index" style="list-style: none; position: absolute; width: 320px; top: 0; left: 0;">
+                    <img class="slideAward2Pic" :src="slide.src" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  </li>
+                </template>
               </ul>
             </div>
             <div class="bx-controls bx-has-pager">
               <div class="bx-pager bx-default-pager">
-                <div class="bx-pager-item"><a href="#" data-slide-index="0" class="bx-pager-link">1</a></div>
-                <div class="bx-pager-item"><a href="#" data-slide-index="1" class="bx-pager-link">2</a></div>
-                <div class="bx-pager-item"><a href="#" data-slide-index="2" class="bx-pager-link active">3</a></div>
-                <div class="bx-pager-item"><a href="#" data-slide-index="3" class="bx-pager-link">4</a></div>
-                <div class="bx-pager-item"><a href="#" data-slide-index="4" class="bx-pager-link">5</a></div>
+                <div v-for="(slide, index) in awardSlides" :key="'award-dot-'+slide.id" class="bx-pager-item">
+                  <a href="#" @click.prevent="setAwardSlide(index)" :class="['bx-pager-link', { active: currentAwardIndex === index }]">{{ slide.id }}</a>
+                </div>
               </div>
             </div>
           </div>

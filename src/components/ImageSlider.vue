@@ -21,11 +21,16 @@ const setSlide = (index) => {
 }
 
 const startTimer = () => {
-  timer = setInterval(nextSlide, 3000)
+  if (!timer) {
+    timer = setInterval(nextSlide, 3000)
+  }
 }
 
 const stopTimer = () => {
-  if (timer) clearInterval(timer)
+  if (timer) {
+    clearInterval(timer)
+    timer = null
+  }
 }
 
 onMounted(() => {
@@ -38,22 +43,27 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="slides_container" style="float: left;width: 690px;height: 350px; position: relative; overflow: hidden; background: #fff;" @mouseenter="stopTimer" @mouseleave="startTimer">
-    <div id="slides_home" style="width: 100%; height: 100%;">
-      <template v-for="(slide, index) in slides" :key="slide.id">
-        <div v-show="currentIndex === index" style="width: 100%; height: 100%;">
-          <a v-if="slide.link" :href="slide.link" target="_blank">
-            <img class="slideHomePic" :src="slide.src" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <img v-else class="slideHomePic" :src="slide.src" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+  <div class="slides_container" style="float: left;width: 690px;height: 350px;" @mouseenter="stopTimer" @mouseleave="startTimer">
+    <div class="bx-wrapper" style="max-width: 690px;">
+      <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 350px;">
+        <ul id="slides_home" style="width: 100%; height: 100%; position: relative; padding: 0; margin: 0; list-style: none;">
+          <template v-for="(slide, index) in slides" :key="slide.id">
+            <li v-show="currentIndex === index" style="list-style: none; position: absolute; width: 690px; top: 0; left: 0;">
+              <a v-if="slide.link" :href="slide.link" target="_blank">
+                <img class="slideHomePic" :src="slide.src" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+              </a>
+              <img v-else class="slideHomePic" :src="slide.src" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </li>
+          </template>
+        </ul>
+      </div>
+      <div class="bx-controls bx-has-pager">
+        <div class="bx-pager bx-default-pager">
+          <div v-for="(slide, index) in slides" :key="'dot-'+slide.id" class="bx-pager-item">
+            <a href="#" @click.prevent="setSlide(index)" :class="['bx-pager-link', { active: currentIndex === index }]">{{ slide.id }}</a>
+          </div>
         </div>
-      </template>
+      </div>
     </div>
-    
-    <ul class="pagination" style="position: absolute; right: 10px; bottom: 10px;">
-      <li v-for="(slide, index) in slides" :key="'dot-'+slide.id" :class="{ current: currentIndex === index }">
-        <a href="#" @click.prevent="setSlide(index)">{{ slide.id }}</a>
-      </li>
-    </ul>
   </div>
 </template>
