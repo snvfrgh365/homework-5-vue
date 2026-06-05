@@ -1,4 +1,4 @@
-/* Combined extracted styles from the MHTML source */
+﻿/* Combined extracted styles from the MHTML source */
 
 @charset "utf-8";
 
@@ -12,19 +12,19 @@ table { border-spacing: 0px; }
 
 fieldset, img { border: 0px; }
 
-body { font-family: arial, 微軟正黑體; font-size: 14px; line-height: 20px; color: rgb(83, 83, 83); }
+body { font-family: arial, 敺株?甇??擃? font-size: 14px; line-height: 20px; color: rgb(83, 83, 83); }
 
 .wrapper { width: 1010px; margin: auto; }
 
 .header { padding: 10px 0px; font-size: 12px; height: 60px; }
 
-.content { min-height: 1150px; background: url("content_bg.jpg") center top repeat-x rgb(245, 245, 242); }
+.content { min-height: 1150px; background: url("/images/content_bg.jpg") center top repeat-x rgb(245, 245, 242); }
 
 /* (additional rules from css.css omitted for brevity) */
 
 
 /* ======== small embedded CSS (cid) ======== */
-.title12oe2 { font-family: 新細明體, Arial, taipei; font-size: 12px; line-height: 135%; }
+.title12oe2 { font-family: ?啁敦??, Arial, taipei; font-size: 12px; line-height: 135%; }
 .slideHomePic { width: 690px; height: 350px; border: 0px solid white; }
 .slideAward2Pic { width: 320px; height: 190px; border: 0px solid white; }
 
@@ -53,4 +53,5 @@ body { font-family: arial, 微軟正黑體; font-size: 14px; line-height: 20px; 
 
 
 /* End of combined stylesheet (trimmed) */
+
 
