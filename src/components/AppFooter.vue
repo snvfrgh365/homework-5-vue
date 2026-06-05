@@ -1,7 +1,3 @@
-<script setup>
-// AppFooter Component
-</script>
-
 <template>
   <div class="footer"> 
     <div class="wrapper">
@@ -20,8 +16,7 @@
             </td>
             <td>
               <a href="https://www.cdic.gov.tw/main_ch/chinese.html" target="_blank">
-                <img src="/images/cdic_logo.jpeg" alt="">
-              </a>
+              　<img src="/images/cdic_logo.jpeg" alt=""></a>
             </td>
           </tr>
         </tbody>
@@ -29,6 +24,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-</style>
