@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/vue-sfc/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/homework-5-vue/' : '/',
   plugins: [
     vue(),
     vueDevTools(),
